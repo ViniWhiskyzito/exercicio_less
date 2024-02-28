@@ -1,0 +1,35 @@
+
+@max-container-width: 1024px;
+@container-padding: 16px;
+
+@menu-item-margin: 24px;
+
+@product-grid-columns: 3;
+@product-grid-column-gap: 1%;
+@product-grid-row-gap: 4%;
+
+
+@mobile-max-width: 1023px;
+@tablet-max-width: 767px;
+
+
+@media screen and (max-width: @mobile-max-width) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, calc((100% / 2) - (@product-grid-column-gap / 2)));
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: @tablet-max-width) {
+    .products {
+        display: block;
+    }
+
+    .product-item {
+        margin-bottom: 32px;
+    }
+}
